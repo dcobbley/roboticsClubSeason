@@ -1,0 +1,84 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,amsthm,tabu,enumerate,tikz}
+\usepackage[margin=1in]{geometry}
+\usepackage{verbatim} % Allows Multi-line comments 
+\usepackage{multicol}
+\usetikzlibrary{automata,positioning}
+\newcommand{\encode}[1]{\langle #1 \rangle}
+\usepackage[parfill]{parskip}
+\usepackage{hyperref}
+
+\usepackage{indentfirst}
+
+
+\title{Java Koans}
+\author{David Cobbley }
+\date{September 2016}
+
+\begin{document}
+
+\maketitle
+
+These instructions were origionally authored by \textit{\href{http://web.cecs.pdx.edu/~whitlock/}{David Whitlock}}. The instructions here have been adapted to run in a windows environment. Please read through the entire document before proceeding.
+
+A \textit{koan} is a teaching question that is used in Buddhist discourse that seeks to provide deep insight into a problem. While the answer to a koan can be subtle, they are not meant to be tricky like a puzzle is. Koans have correct answers, but the intention of working through a koan is to understand its deeper meaning.
+
+To gain a better understanding of the Java programming language, you will work through a series of Java koans while simultaneously learning to program the robot. Each koan is a small piece of code (about the size of a unit test) that demonstrates a particular feature or aspect of the Java language or API. The koans were originally authored by Mat Bentley and can found in their original form at \url{https://github.com/matyb/java-koans}.
+
+I have created a Maven archetype for getting started with the koans. The following command line will create a Maven project for working with the Java koans. This step may take up to \textbf{3 minutes} so be patient with the terminal, it may appear to be frozen for some time. Also be sure to also replace your name in the string below \textless NAME\textgreater:
+
+\textit{Only run once you have installed maven - see Installing Maven below}
+
+From a windows cmd prompt (Windows key + r), Open "cmd" and press enter. You should see a black command prompt. Note - the end of installation, the terminal may ask "artifactId:" Type "koans", then it will ask "package:4488.robotics.name Y: :", just press enter. Copy and paste the entire chunk at once:
+
+\hspace{2mm} mvn archetype:generate \verb|^|\\
+\hspace{2mm} -DarchetypeCatalog=https://dl.bintray.com/davidwhitlock/maven/ \verb|^|\\
+\hspace{2mm} -DarchetypeGroupId=edu.pdx.cs410J \verb|^|\\
+\hspace{2mm} -DarchetypeArtifactId=java-koans-archetype \verb|^|\\
+\hspace{2mm} -DarchetypeVersion=Summer2016 \verb|^|\\
+\hspace{2mm} -DgroupId=4488.robotics.\textless NAME\textgreater \verb|^|\\
+\hspace{2mm} -DartifactId=koans \verb|^|\\
+\hspace{2mm} -Dversion=1.0-SNAPSHOT
+
+If you get the error: \textit{The system cannot find the specified file} Then you did not change your \textless NAME\textgreater in the string.
+
+Note that it is important that the artifactId be koans. Otherwise, the koan application wont work correctly. After the Maven project is created, open in Eclipse and import the pom.xml file into a new project. Import $\rightarrow$ Maven $\rightarrow$ Existing Maven Projects. Supply the root directory - C:\textbackslash Users\textbackslash \textless UserName\textgreater \textbackslash koans
+
+
+
+Next, start the koan application with Maven. The application will instruct you (in the cmd prompt) what to do next and will give you feedback as you complete the koans (modify code in Eclipse). In a windows cmd prompt (Windows key + r, type cmd).
+
+\begin{verbatim}
+    $ cd koans
+    $ mvn exec:java
+\end{verbatim}
+
+The objective of the koans is not complete them as fast as you can. In fact, it is pretty easy to reverse engineer the solutions. If you do that, though, youre missing the point. I recommend that you work on the koans a little bit every day to gradually build up an understanding of the Java language. I also encourage you ask questions about the koans and share your insights with the rest of the team on the \textbf{\href{http://glencoerobotics.com/forum/viewforum.php?f=8}{forum}}
+
+\paragraph{Installing Maven} \mbox{} 
+
+\begin{enumerate}
+
+\item Download \textbf{\href{http://maven.apache.org/download.cgi}{Maven}}, select \textit{\href{http://shinyfeather.com/maven/maven-3/3.3.9/binaries/apache-maven-3.3.9-bin.zip}{apache-maven-3.3.9-bin.zip}}.
+\item Unzip to your downloads directory.
+\item Make a new directory \textit{C:\textbackslash Program Files\textbackslash Apache}
+\item Copy newly unzipped folder into \textit{C:\textbackslash Program Files\textbackslash Apache\textbackslash apache-maven-3.3.9}
+\end{enumerate}
+
+\paragraph{Setting PATH} \mbox{} 
+
+*Caution - \textit{This is a quick way to hose your system if you do not follow instructions precisely}*
+
+In Environment Variables (File Explorer $\rightarrow$ right click This PC - properties $\rightarrow$ Advanced system settings $\rightarrow$ Advanced $\rightarrow$ Environment Variables)
+
+Create New "System Variables" for:
+\begin{itemize}
+\item JAVA\_HOME
+\item M2\_HOME
+\item MAVEN\_HOME. 
+\end{itemize}
+See \textbf{\href{https://www.mkyong.com/maven/how-to-install-maven-in-windows/}{HERE}} for more instructions
+
+\end{document}
+
