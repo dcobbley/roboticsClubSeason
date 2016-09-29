@@ -8,8 +8,12 @@
 \newcommand{\encode}[1]{\langle #1 \rangle}
 \usepackage[parfill]{parskip}
 \usepackage{hyperref}
-
+\usepackage{titlesec}
 \usepackage{indentfirst}
+
+\titlespacing\section{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
+\titlespacing\subsubsection{0pt}{12pt plus 4pt minus 2pt}{0pt plus 2pt minus 2pt}
 
 \title{Robotics Club Week 1}
 \author{David Cobbley }
@@ -21,6 +25,7 @@
 
 \section{Agenda}
 \begin{itemize}
+    
     \item Welcome Programmers
     \item Introductions - Mentors \& Students
     \item Select note taker
@@ -35,15 +40,15 @@
 
 \section{welcome}
 These are the most important links you will need. Everything you want to know can be found here.
-
-\url{http://glencoerobotics.com/forum/}
-
-\url{https://www.chiefdelphi.com/forums/portal.php}
-
-\url{http://wpilib.screenstepslive.com/s/4485}
+\begin{itemize}
+    \item[] \url{http://glencoerobotics.com/forum/}
+    \item[] \url{https://www.chiefdelphi.com/forums/portal.php}
+    \item[] \url{http://wpilib.screenstepslive.com/s/4485}
+\end{itemize}
 
 \section{Programming Groups}
 \begin{itemize}
+    
     \item Robot
     \item Apps
 \end{itemize}
@@ -64,52 +69,62 @@ Don't have to stick to a group
 
 
 \section{RoboRio}
-\url{https://wpilib.screenstepslive.com/s/4485/m/13503/c/86641}
-
-\url{http://www.ni.com/pdf/manuals/374474a.pdf}
-
-\url{https://decibel.ni.com/content/docs/DOC-30419}
+\begin{itemize}
+\item[] \url{https://wpilib.screenstepslive.com/s/4485/m/13503/c/86641}
+\item[] \url{http://www.ni.com/pdf/manuals/374474a.pdf}
+\item[] \url{https://decibel.ni.com/content/docs/DOC-30419}
+\end{itemize}
 
 \section{Languages for FRC}
 \subsection{java}
-\url{https://wpilib.screenstepslive.com/s/4485/m/13503/l/599679-installing-eclipse-c-java}
-
-\url{https://www.chiefdelphi.com/forums/archive/index.php/t-128134.html}
+\begin{itemize}
+\item[] \url{https://wpilib.screenstepslive.com/s/4485/m/13503/l/599679-installing-eclipse-c-java}
+\item[] \url{https://www.chiefdelphi.com/forums/archive/index.php/t-128134.html}
+\end{itemize}
 
 \subsection{C++}
-\url{https://wpilib.screenstepslive.com/s/4485/m/13503/l/599679-installing-eclipse-c-java}
-
-\url{https://www.reddit.com/r/FRC/comments/4k24cu/java_vs_c/}
+\begin{itemize}
+\item[] \url{https://wpilib.screenstepslive.com/s/4485/m/13503/l/599679-installing-eclipse-c-java}
+\item[] \url{https://www.reddit.com/r/FRC/comments/4k24cu/java_vs_c/}
+\end{itemize}
 
 \subsection{Other}
-\url{https://github.com/robotpy/pyfrc}
+\begin{itemize}
+\item[] \url{https://github.com/robotpy/pyfrc}
+\end{itemize}
 
 \section{Why we use Java}
 \begin{itemize}
-    \item Better visibility across mentors to assist students
-    \item code checkins - pull requests
+    \item Better visibility across mentors to assist students.
+    \item Code checkins - pull requests.
+    \item Continuous integration build capabilities.
+    \item Fast enough for what we need to do.
+    \item Wpilib abstracts all the difficult DIO etc. away allowing students to focus on programming paradigm.
 \end{itemize}
 
 \pagebreak
 \section{Robots}
 \subsection{Eclipse}
-\url{http://www.thebluealliance.com/team/4488/2016}
-
-\url{https://www.youtube.com/watch?v=oxOSjQpTp3U}
-
-\url{https://www.youtube.com/watch?v=9WOQbL9n4Cs}
+\begin{itemize}
+\item[] \url{http://www.thebluealliance.com/team/4488/2016}
+\item[] \url{https://www.youtube.com/watch?v=oxOSjQpTp3U}
+\item[] \url{https://www.youtube.com/watch?v=9WOQbL9n4Cs}
+\end{itemize}
 \subsection{Solar Flare}
-\url{http://www.thebluealliance.com/team/4488/2015}
-
-\url{https://www.youtube.com/watch?v=VpZazV3wP1s}
+\begin{itemize}
+\item[] \url{http://www.thebluealliance.com/team/4488/2015}
+\item[] \url{https://www.youtube.com/watch?v=VpZazV3wP1s}
+\end{itemize}
 \subsection{Wildfire}
-\url{http://www.thebluealliance.com/team/4488/2014}
-
-\url{https://www.youtube.com/watch?v=tEhQnKbRz-0}
-
-\url{https://www.youtube.com/watch?v=lmtvsggl81M}
+\begin{itemize}
+\item[] \url{http://www.thebluealliance.com/team/4488/2014}
+\item[] \url{https://www.youtube.com/watch?v=tEhQnKbRz-0}
+\item[] \url{https://www.youtube.com/watch?v=lmtvsggl81M}
+\end{itemize}
 \subsection{Phantom}
-\url{http://www.thebluealliance.com/team/4488/2013}
+\begin{itemize}
+\item[] \url{http://www.thebluealliance.com/team/4488/2013}
+\end{itemize}
 
 
 
@@ -121,16 +136,22 @@ Mechanical, Electrical, Business, and Apps are all required. Without them we wou
 
 \section{Java Environment}
 We use Eclipse with the NI driver station.
-\url{https://wpilib.screenstepslive.com/s/4485/m/13503/l/599679-installing-eclipse-c-java}
-\url{https://wpilib.screenstepslive.com/s/4485/m/13503/l/599677-frc-driver-station-powered-by-ni-labview}
+
+\begin{itemize}
+\item[] \url{https://wpilib.screenstepslive.com/s/4485/m/13503/l/599679-installing-eclipse-c-java}
+\item[] \url{https://wpilib.screenstepslive.com/s/4485/m/13503/l/599677-frc-driver-station-powered-by-ni-labview}
+\end{itemize}
 
 \section{Koans}
-\url{https://github.com/dcobbley/roboticsClubSeason/blob/master/Koans.pdf
-}
-\section{Extras}
-\url{https://www.youtube.com/watch?v=nZf9F-3QKMw}
+\begin{itemize}
+\item[] \url{https://github.com/dcobbley/roboticsClubSeason/blob/master/Koans.pdf}
+\end{itemize}
 
-\url{https://www.youtube.com/watch?v=Qfe-zs2f2EM}
+\section{Extras}
+\begin{itemize}
+\item[] \url{https://www.youtube.com/watch?v=nZf9F-3QKMw}
+\item[] \url{https://www.youtube.com/watch?v=Qfe-zs2f2EM}
+\end{itemize}
 
 
 \end{document}
